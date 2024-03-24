@@ -7,5 +7,5 @@
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
-  "include": ["vite.config.ts", "express-plugin.ts"]
+  "include": ["vite.config.ts", "express-plugin.ts", "./server/server-setup.ts"],
 }

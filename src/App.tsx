@@ -7,10 +7,13 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  const socket = io("http://localhost:5173");
+  const socket = io("http://localhost:3000");
+  console.log('Initiating socket connection');
 
   socket.on("connect", () => {
     console.log("Connected to server");
+
+    socket.emit("message", "Hello from the client 2!");
   });
 
   socket.on("disconnect", () => {
